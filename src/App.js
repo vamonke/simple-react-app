@@ -7,9 +7,9 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 
 import Home from './Home';
-import User from './User/User';
+import User from './User';
 
-import './App.css';
+import style from './css/App.module.css';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
           </Link>
         </Toolbar>
       </AppBar>
-      <div className="container">
+      <div className={style.container}>
         <Route exact path="/" component={Home} />
         <Route path="/user/:id" component={User} />
       </div>

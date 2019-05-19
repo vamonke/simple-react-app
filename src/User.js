@@ -4,8 +4,9 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Icon from '@material-ui/core/Icon';
+import Button from '@material-ui/core/Button';
 
-import styles from './User.module.css';
+import styles from './css/User.module.css';
 
 class User extends React.Component {
   constructor(props) {
@@ -43,24 +44,35 @@ class User extends React.Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <div className="center">Loading...</div>;
     } else {
       return (
-        <Card className={styles.card}>
-          <CardMedia
-            className={styles.avatar}
-            image={user.avatar}
-          />
-          <CardContent>
-            <Typography variant="h4" gutterBottom>
-              {user.first_name + ' ' + user.last_name}
-            </Typography>
-            <Icon>mail_outline</Icon>
-            <span className={styles.email}>
-              {user.email}
-            </span>
-          </CardContent>
-        </Card>
+        <div>
+          <Card className={styles.card}>
+            <CardMedia
+              className={styles.avatar}
+              image={user.avatar}
+            />
+            <CardContent>
+              <Typography variant="h4" gutterBottom>
+                {user.first_name + ' ' + user.last_name}
+              </Typography>
+              <Icon>mail_outline</Icon>
+              <span className={styles.email}>
+                {user.email}
+              </span>
+            </CardContent>
+          </Card>
+          <div className="center">
+            <Button
+              variant="outlined"
+              color="default"
+              href="/"
+              disableRipple>
+              Back
+            </Button>
+          </div>
+        </div>
       );
     }
   }
