@@ -1,0 +1,11 @@
+.card {
+  text-align: center;
+  padding: 24px; 
+}
+
+.avatar {
+  margin: 0 auto 16px;
+  right: 0;
+  left: 0;
+  border-radius: 50%;
+}
