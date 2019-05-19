@@ -44,7 +44,7 @@ class Home extends React.Component {
       return (
         <Grid container spacing={24}>
           {users.map(user => (
-            <Grid item xs={4} key={user.name}>
+            <Grid item xs={4} key={user.id}>
               <UserCard user={user} key={user.name}/>
             </Grid>
           ))}

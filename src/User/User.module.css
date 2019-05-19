@@ -1,0 +1,14 @@
+.card {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.avatar {
+  height: 0;
+  padding-top: 100%;
+}
+
+.email {
+  vertical-align: top;
+  margin-left: 8px;
+}
